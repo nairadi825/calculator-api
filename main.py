@@ -36,3 +36,17 @@ def subtract(a: float, b: float):
     - JSON object with the result
     """
     return {"result": a - b}
+
+@app.get("/multiply/{a}/{b}", status_code=200)
+def multiply(a: float, b: float):
+    """
+    Multiply two numbers together.
+
+    Parameters:
+    - a: First number
+    - b: Second number
+
+    Returns:
+    - JSON object with the result
+    """
+    return {"result": a * b}
