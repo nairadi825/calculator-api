@@ -66,3 +66,14 @@ def divide(a: float, b: float):
     if b == 0:
         return {"error": "Divide by zero error. Please enter a non-zero error for the second number"}
     return {"result": a / b}
+    
+import math
+@app.get("/hypotenuse/{a}/{b}", status_code=200)
+def hypotenuse(a: float, b: float):
+    """
+    Calculate the hypotenuse 
+    Both a and b must be positive numbers.
+    """
+    if a <= 0 or b <= 0:
+        return {"error": "Both a and b must be positive and non-zero"}
+    return {"result": math.sqrt(a*a + b*b)}
