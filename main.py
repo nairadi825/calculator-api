@@ -75,5 +75,5 @@ def hypotenuse(a: float, b: float):
     Both a and b must be positive numbers.
     """
     if a <= 0 or b <= 0:
-        return {"error": "Both a and b must be positive and non-zero"}
+        return {"error": "Both a and b must be a positive number"}
     return {"result": math.sqrt(a*a + b*b)}
