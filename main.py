@@ -77,3 +77,15 @@ def hypotenuse(a: float, b: float):
     if a <= 0 or b <= 0:
         return {"error": "Both a and b must be a positive number"}
     return {"result": math.sqrt(a*a + b*b)}
+
+@app.get("/farenheit to celcius/{a}", status_code=200)
+def f_to_c(a: float):
+    """
+    Converts a temperature from Fahrenheit to Celsius.
+
+    Parameters:
+    - a: Temperature in Fahrenheit
+    
+    """
+    c = (a - 32) * 5/9
+    return {"result": c}
