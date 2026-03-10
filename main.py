@@ -87,5 +87,4 @@ def f_to_c(a: float):
     - a: Temperature in Fahrenheit
     
     """
-    c = (a - 32) * 5/9
-    return {"result": c}
+    return {"result": (a - 32) * 5/9}
