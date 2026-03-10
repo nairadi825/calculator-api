@@ -87,3 +87,13 @@ def fahrenheit_to_celsius(a: float):
     - a: Temperature in Fahrenheit
     """
     return {"result": (a - 32) * 5/9}
+
+@app.get("/minimum/{a}/{b}/{c}", status_code=200)
+def minimum(a: float, b: float, c: float):
+    """
+    Return the minimum of three values.
+    """
+    
+    values = [a, b, c]
+
+    return {"result": min(values)}
